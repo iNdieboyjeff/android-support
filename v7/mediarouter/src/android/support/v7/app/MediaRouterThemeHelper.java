@@ -29,7 +29,7 @@ final class MediaRouterThemeHelper {
     public static Context createThemedContext(Context context, boolean forceDark) {
         boolean isLightTheme = isLightTheme(context);
         if (isLightTheme && forceDark) {
-            context = new ContextThemeWrapper(context, R.style.Theme_AppCompat);
+            context = new ContextThemeWrapper(context, R.style.Sherlock___Theme);
             isLightTheme = false;
         }
         return new ContextThemeWrapper(context, isLightTheme ?
@@ -47,8 +47,6 @@ final class MediaRouterThemeHelper {
     }
 
     private static boolean isLightTheme(Context context) {
-        TypedValue value = new TypedValue();
-        return context.getTheme().resolveAttribute(R.attr.isLightTheme, value, true)
-                && value.data != 0;
+        return false;
     }
 }
